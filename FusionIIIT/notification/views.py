@@ -578,3 +578,16 @@ def iwd_notif(sender,recipient,type):
     if type == "Request_rejected": 
         verb = "Request rejected by " + sender.username + "." 
     notify.send(sender=sender,recipient=recipient,url=url,module=module,verb=verb)
+    
+    
+
+def purchase_notif(sender, recipient):
+    url = 'ps1:ps1'
+    module = 'Purchase and Store'
+    sender = sender
+    recipient = recipient
+    verb = 'New file received'
+
+    notify.send(sender=sender, recipient=recipient,
+                url=url, module=module, verb=verb)
+
